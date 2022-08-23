@@ -40,7 +40,7 @@ function App() {
         {/* ********** END ADD TODO FORM ********** */}
       </div>
 
-      <TodoContainer todos={todos} />
+      <TodoContainer todos={todos} fetchTodos={fetchTodos} />
 
       {/* <div className="my-2 d-flex justify-content-between"> */}
       {/* ********** PAGE LIMIT ********** */}

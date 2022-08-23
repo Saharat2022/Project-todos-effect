@@ -22,7 +22,7 @@ function TodoContainer(props) {
         <PageLimit />
         <Sort />
       </div>
-      <Todolist todos={props.todos} />
+      <Todolist todos={props.todos} fetchTodos={props.fetchTodos} />
       {/* ********** TODO ITEM#1 ********** */}
 
       {/* ********** END TODO ITEM#1 ********** */}
