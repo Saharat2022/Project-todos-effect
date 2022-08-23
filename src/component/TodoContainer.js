@@ -6,7 +6,7 @@ import SearchText from "./SearchText";
 import Sort from "./Sort";
 import Todolist from "./TodoList";
 
-function TodoContainer() {
+function TodoContainer(props) {
   return (
     <>
       <div className="my-2 d-flex gap-3">
@@ -22,7 +22,7 @@ function TodoContainer() {
         <PageLimit />
         <Sort />
       </div>
-      <Todolist />
+      <Todolist todos={props.todos} />
       {/* ********** TODO ITEM#1 ********** */}
 
       {/* ********** END TODO ITEM#1 ********** */}
