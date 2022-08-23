@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 
 function TodoForm(props) {
-  const [title, setTitle] = useState("");
+  // const [title, setTitle] = useState("");
+  const [title, setTitle] = useState(props.initialValue || "");
   // const handleSubmitForm = async (e) => {
   const handleSubmitForm = (e) => {
     e.preventDefault();

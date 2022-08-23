@@ -33,7 +33,20 @@ function App() {
     fetchTodos();
   }, []);
 
-  const handleSubmitCreate = (title) => {};
+  const handleSubmitCreate = async (title) => {
+    try {
+      //if success validate: sent to 8080 โดยส่ง  { title,completed: false } ไป
+      const res = await axios.post("http://localhost:8080/todos", {
+        title,
+        completed: false,
+      });
+      fetchTodos();
+
+      // console.log(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="container mt-5 mb-3" style={{ maxWidth: 576 }}>
       <div className="my-4">

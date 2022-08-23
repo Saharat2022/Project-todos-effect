@@ -6,7 +6,18 @@ import TodoForm from "./TodoForm";
 function TodoItem(props) {
   const [isedit, setIsedit] = useState(false);
 
-  const handleSubmitEdit = (title) => {};
+  const handleSubmitEdit = async (title) => {
+    try {
+      await axios.put("http://localhost:8080/todos/" + props.todo.id, {
+        title,
+        completed: props.todo.completed,
+      });
+      props.fetchTodos();
+      setIsedit(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <li
@@ -18,6 +29,7 @@ function TodoItem(props) {
         <TodoForm
           onSubmit={() => handleSubmitEdit(props.title)}
           onCancel={() => setIsedit(false)}
+          initialValue={props.todo.title}
         />
       ) : (
         <TodoContent
