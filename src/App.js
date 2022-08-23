@@ -28,7 +28,6 @@ function App() {
 
       {/* ********** TODO LIST ********** */}
       {/* <ul className="list-group my-2"> */}
-      <Todolist />
       {/* ********** TODO ITEM#1 ********** */}
 
       {/* ********** END TODO ITEM#1 ********** */}
@@ -37,12 +36,6 @@ function App() {
       {/* </ul> */}
       {/* ********** END TODO LIST ********** */}
 
-      <div className="my-2 d-flex justify-content-between align-items-center">
-        <small className="text-muted">Showing 6 to 10 of 12 entries</small>
-        {/* ********** PAGINATION ********** */}
-        <Pagination />
-        {/* ********** END PAGINATION ********** */}
-      </div>
     </div>
   );
 }
