@@ -32,11 +32,14 @@ function App() {
     //   .catch((err) => console.log(err));
     fetchTodos();
   }, []);
+
+  const handleSubmitCreate = (title) => {};
   return (
     <div className="container mt-5 mb-3" style={{ maxWidth: 576 }}>
       <div className="my-4">
         {/* ********** ADD TODO FORM ********** */}
-        <TodoForm fetchTodos={fetchTodos} />
+        {/* <TodoForm fetchTodos={fetchTodos} /> */}
+        <TodoForm fetchTodos={fetchTodos} onSubmit={handleSubmitCreate} />
         {/* ********** END ADD TODO FORM ********** */}
       </div>
 
